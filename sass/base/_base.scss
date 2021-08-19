@@ -6,7 +6,7 @@ $soft-pink: hsl(333, 80%, 67%);
 //FONT COLORS
 
 $dark-greyish-magenta: hsl(303, 10%, 53%);
-$light-greyish-agenta: hsl(300, 24%, 96%);
+$light-greyish-magenta: hsl(300, 24%, 96%);
 $white: hsl(0, 0%, 100%);
 
 $black: #000;
@@ -15,7 +15,7 @@ $black-2: rgba(0, 0, 0, 0.5);
 //RESPONSIVE BREAKPOINTS
 
 $bp-desktop: 90em; //1440px
-$bp-tablet: 56.25em; //900px
+$bp-tablet: 62.5em; //1000px
 $bp-mobile: 40.625em; //650px
 
 //RESETS & RESPONSIVE FONT SIZES
@@ -43,13 +43,62 @@ html {
 
 body {
     font-family: "Spartan", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: $dark-greyish-magenta;
+    background: url(../../img/bg-pattern-top-desktop.svg),
+        url(../../img/bg-pattern-bottom-desktop.svg), $white;
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
+
+    padding: 1rem;
+}
+
+.grid {
+    min-height: 100vh;
+    max-width: 106rem;
+    margin: 0 auto;
+
+    display: grid;
+    row-gap: 8rem;
+    column-gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    align-content: center;
+
+    @media only screen and (max-width: $bp-tablet) {
+        row-gap: 2rem;
+        column-gap: 0;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, min-content);
+    }
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: $dark-magenta;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: 1.6rem;
+    color: $dark-magenta;
+    margin-left: 3rem;
+    @media only screen and (max-width: $bp-tablet) {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
 }
 
 .attribution {
     text-align: center;
     font-size: 1.2rem;
     color: $black-2;
-    margin-top: 5rem;
+    margin-bottom: 5rem;
+
+    @media only screen and (max-width: $bp-tablet) {
+        margin: 5rem 0;
+    }
 
     &__link {
         color: $black;
