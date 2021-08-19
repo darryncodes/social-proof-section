@@ -259,7 +259,7 @@ h2 {
 @media only screen and (max-width: 62.5em) {
   .stars__card {
     max-width: 35rem;
-    padding: 1rem 2rem;
+    padding: 1rem 5rem;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
