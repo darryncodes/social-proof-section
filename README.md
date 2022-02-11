@@ -33,7 +33,6 @@ Users should be able to:
 
 -   [GitHub repo](https://github.com/darryncodes/social-proof-section)
 -   [Solution URL](https://darryncodes.github.io/social-proof-section/)
--   [Live Site URL](https://www.darryncodes.co.uk/pages/social-proof-section.html)
 
 ## My process
 
